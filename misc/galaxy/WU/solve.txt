@@ -1,0 +1,9 @@
+1.find which char maps to single quote
+2.find the char mapping for spiral using those quotes. for example if a single quote 
+    maps to the letter j then submit payloads like jaj and jbj to see what a and b 
+    map to, respectively. One big payload of <single_quote>entire_alphabet<single_quote> would work.
+3.there are no integers allowed. use something like ([]<[[]])+([]<[[]]) to construct integers
+    not() is also a valid path to create integers out of truthy statements.
+4. no positive indices are allowed, use ~ to convert those integers into negative indices
+5. flag can be leaked char by char using this method
+    for example, if spiral maps to rndvec, then rndvec[~([]<[[]])+([]<[[]])] will leak last char of flag

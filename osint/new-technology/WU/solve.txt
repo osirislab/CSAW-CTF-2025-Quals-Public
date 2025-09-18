@@ -1,0 +1,6 @@
+1. reverse image search, some kind of observatory or telescope
+2. eponymous gathering place + prisoner -> "something that gave name to gathering place" + prisoner -> agora + prisoner -> agora famous prisoner -> ancient agora of athens + socrates
+3. "something many of the time would have liked to use to prove an unpopular claim about Selene made by a certain prisoner’s platonic influence" -> "unpopular claim about the moon in ancient greece" -> anaxagoras (confirms greece) -> to confirm, googling "anaxagoras socrates plato" tells you plato wrote socrates collecting anaxagoras' books.
+4. observatories in athens -> national observatory of athens doesn't look quite the same as the pic -> Dorides telescope does
+5. Google street view near ancient agora of athens, looking at dorides, 37°58'33.4"N 23°43'24.8"E on adrianou street has a view of it from the same angle
+csawctf{adrianou_doridestelescope_anaxagoras}

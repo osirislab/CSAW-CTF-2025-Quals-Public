@@ -1,0 +1,6 @@
+- "sky of frost" - cold war era
+- "furnace no winter could quell" - reference to an RTG (radioactive thermoelectric generator), typical power source when solar panels are ineffective
+- "giant draped in shattered glass" - reference to mission, exploring asteroid belt by Jupiter
+- "Another blazed the trail before me" - Pioneer 10 came first, first to reach interstellar space
+- "Now I keep strange company on the endless shore" - only five satellites currently in interstellar space
+- Pioneer 11 is the answer

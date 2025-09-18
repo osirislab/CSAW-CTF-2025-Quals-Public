@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    color: #222;
+    background-color: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 0 auto 20px auto;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+tr:nth-child(even) td {
+    background-color: #fdfdfd;
+}
+
+tr:hover td {
+    background-color: #f2f6ff;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.form-box {
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 60px;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #444;
+}
+
+.flash-messages {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+
+.flash {
+    margin: 0;
+    color: #a94442;
+}
+
+a {
+    color: #0d47a1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 15px;
+}

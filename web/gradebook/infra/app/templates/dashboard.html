@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Student Dashboard</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash-messages" id="flash-box">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endwith %}
+    <form method="POST" action="/submit-feedback">
+        <table>
+            <thead>
+                <tr>
+                    <th>Class ID</th>
+                    <th>Class Name</th>
+                    <th>Grade</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for element in student.enrollments %}
+                <tr>
+                    <td>{{ element.class_id }}</td>
+                    <td>{{ element.class_name }}</td>
+                    <td>{{ element.grade }}</td>
+                    <td>
+                        <select name="rating_{{ element.enrollment_id }}">
+                            <option value="">Select Rating</option>
+                            <option value="1" {% if element.feedback_rating == 1 %}selected{% endif %}>1 Star</option>
+                            <option value="2" {% if element.feedback_rating == 2 %}selected{% endif %}>2 Stars</option>
+                            <option value="3" {% if element.feedback_rating == 3 %}selected{% endif %}>3 Stars</option>
+                            <option value="4" {% if element.feedback_rating == 4 %}selected{% endif %}>4 Stars</option>
+                            <option value="5" {% if element.feedback_rating == 5 %}selected{% endif %}>5 Stars</option>
+                        </select>
+                    </td>
+                    <td>
+                        <textarea name="comment_{{ element.enrollment_id }}" placeholder="Optional comment...">{{ element.feedback_comment|safe or '' }}</textarea>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="submit-btn">Submit Ratings & Comments</button>
+    </form>
+ 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Control Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-dark text-white p-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <span>Orion Control</span>
+            <a href="/login" class="text-white">Login</a>
+        </nav>
+    </header>
+        <!-- the intern left a note on the wall, what could it be? -->
+        <!-- user:password -->
+    <div class="container mt-5 flex-grow-1 d-flex justify-content-center align-items-center">
+        <div class="col-md-6 col-lg-5">
+            <h1 class="text-center">Orion Control Login</h1>
+            <form action="/login" method="post" class="mt-4">
+                <div id="error-message" class="alert alert-danger" style="display: none;">
+                    Invalid username or password.
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2025 Orion Control | @exec_mayank</p>
+    </footer>
+
+    <script>
+        // Check for error parameter in URL and show error message
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('error') === 'invalid') {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

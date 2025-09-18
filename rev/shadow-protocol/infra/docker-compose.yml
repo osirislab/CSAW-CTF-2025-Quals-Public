@@ -1,0 +1,11 @@
+services:
+  shadow_protocol:
+    build: .
+    container_name: shadow_protocol
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128

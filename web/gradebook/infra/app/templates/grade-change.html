@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Change</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Grade Change</h1>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <form method="POST" class="form-box">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}"/>
+        
+        <p>
+            <label>Student ID:</label><br>
+            <input type="text" name="student_id" required>
+        </p>
+        
+        <p>
+            <label>Class ID:</label><br>
+            <input type="text" name="class_id" required>
+        </p>
+        
+        <p>
+            <label>Grade:</label><br>
+            <select name="grade" required>
+                <option value="">Select Grade</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option>
+            </select>
+        </p>
+        
+        <button type="submit">Update Grade</button>
+    </form>
+</body>
+</html>

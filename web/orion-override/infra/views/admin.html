@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Admin Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-dark text-white p-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <a href="/dashboard?admin=true" class="text-white text-decoration-none">Orion Admin Dashboard</a>
+            <a href="/logout" class="text-white">Logout</a>
+        </nav>
+    </header>
+    <div class="container mt-5 flex-grow-1">
+        <h1 class="text-center">Orion Admin Dashboard</h1>
+        <section class="mt-4">
+            <h2>Mission Telemetry</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Altitude</h5>
+                            <p class="card-text">Current: 400 km</p>
+                            <p class="card-text">Target: 500 km</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Velocity</h5>
+                            <p class="card-text">Current: 7.8 km/s</p>
+                            <p class="card-text">Target: 8.0 km/s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Fuel Level</h5>
+                            <p class="card-text">Current: 75%</p>
+                            <p class="card-text">Status: Optimal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-4">
+            <h2>Comms Logs</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>10:15:30 - Ground Control: "Orion, this is Ground Control. How copy?"</p>
+                    <p>10:15:35 - Orion: "Ground Control, this is Orion. Copy loud and clear."</p>
+                    <p>10:16:00 - Ground Control: "Orion, proceed with scheduled burn."</p>
+                    <p>10:16:05 - Orion: "Roger, proceeding with scheduled burn."</p>
+                    <p>10:16:30 - Orion: "Ground Control, we're seeing unusual readings in the propulsion system."</p>
+                    <p>10:16:35 - Ground Control: "Orion, can you elaborate on those readings?"</p>
+                    <p>10:16:40 - Orion: "Temperature rising rapidly in main engine. Pressure fluctuations detected."</p>
+                    <p>10:16:45 - Ground Control: "Orion, this is critical. We need to assess abort conditions."</p>
+                    <p>10:16:50 - Orion: "Ground Control, situation deteriorating. Request immediate abort protocol."</p>
+                    <p>10:16:55 - Ground Control: "Orion, you are cleared for abort. Use admin override immediately."</p>
+                    <p class="text-danger mt-3">⚠️ CRITICAL: Mission abort required.</p>    
+                </div>
+            </div>
+        </section>
+        <section class="mt-4">
+            <h2>Abort Override Functions</h2>
+            <div class="card">
+                <div class="card-body">
+                    <button class="btn btn-danger" onclick="abortMission()">Abort Mission</button>
+                    <button class="btn btn-warning">Override Navigation</button>
+                    <button class="btn btn-info">Override Life Support</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2025 Orion Control | @exec_mayank</p>
+    </footer>
+
+    <script>
+        function abortMission() {
+            alert('Mission Aborted! You saved Orion!\nflag{temp}');
+        }
+    </script>
+</body>
+</html>

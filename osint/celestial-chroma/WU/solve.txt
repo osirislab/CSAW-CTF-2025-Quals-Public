@@ -1,0 +1,34 @@
+solution - DONT look if playtesting please
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. find the main color of the film by looking at the barcode - blue
+2. lookup 'blue alien races on virtual planet film' on google, get 'fantastic planet' movie
+3. lookup the wikipedia page for the movie, note it's a stop motion movie from 'Categories'
+4. find the studio that made it, google that -> reach http://www.kratkyfilm.eu/catalogue/kf/studiojt.htm
+5. find the image on the page and it's URL -> filename is loutka.jpg
+6. we have the flag -> stop-motion + loutka.jpg!

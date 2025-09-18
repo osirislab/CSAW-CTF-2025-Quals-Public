@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin URL Visit</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #f0f2f5; color: #333; }
+        .container { width: 90%; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center; }
+        h1 { font-size: 24px; margin-bottom: 20px; color: #444; }
+        .alert { padding: 10px; margin-bottom: 15px; border-radius: 5px; text-align: center; }
+        .alert.success { background-color: #d4edda; color: #155724; }
+        .alert.error { background-color: #f8d7da; color: #721c24; }
+        form { display: flex; flex-direction: column; }
+        label { margin-bottom: 5px; font-weight: bold; }
+        input[type="url"] { padding: 10px; font-size: 16px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; width: 100%; }
+        button { padding: 10px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit your class reviews here:</h1>
+        {% if message %}
+            <div class="alert success">{{ message }}</div>
+        {% elif error %}
+            <div class="alert error">{{ error }}</div>
+        {% endif %}
+        <form action="/visit" method="POST">
+            <label for="url">Enter URL to Visit:</label>
+            <input type="url" id="url" name="url" required>
+            <button type="submit">Visit URL</button>
+        </form>
+    </div>
+</body>
+</html>

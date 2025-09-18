@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" lang="en" href="static/style.css">
+</head>
+<body>
+    <div class="stars"></div>
+        <div class="falling-stars">
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+            <div class="falling-star"></div>
+    </div>
+
+    <h2>Super Secret Intergalactic Currency Tracker</h2>
+    {% if error %}
+        <h3>{{ error }}</h3>
+    {% endif %}
+    <form class ="login-form" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <p>
+        <a href="{{ url_for('forgot_password') }}">Forgot your password?</a>
+    </p>
+</body>
+</html>

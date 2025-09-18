@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  pyjail:
+    build: .
+    ports:
+      - "21009:21009"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:noexec,nosuid,size=50m
+    ulimits:
+      nproc: 64
+      fsize: 1048576  # 1MB file size limit
+    mem_limit: 128m
+    cpus: 0.5
